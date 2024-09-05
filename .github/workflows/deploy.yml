@@ -1,5 +1,5 @@
 name: Deploy to Vercel
-
+#trigger on push to main
 on:
   push:
     branches: [main]
@@ -8,19 +8,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
-      - run: npm install
-      - run: npm run build
-      - uses: amondnet/vercel-action@v20
+          node-version: '16'
+      - name: Install dependencies 
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          working-directory: ./dist
+          vercel-args: '--prod --confirm'
+          # working-directory: ./dist
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      - uses: actions/setup-node@v2
+        
 
-      - run: npm install -g @vercel/cli
-      - run: vercel --token ${{ secrets.VERCEL_TOKEN }} --scope eustache --prod
