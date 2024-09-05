@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Header from './Header';
 
 function Dashbord() {
   const [expenses, setExpenses] = useState([]);
@@ -24,6 +25,7 @@ function Dashbord() {
 
   return (
     <div className='flex flex-col gap-4 text-center'>
+        <Header />
       <form onSubmit={addExpense} className='flex flex-col gap-4 text-center items-center mt-2'>
         <div className="flex flex-col gap-2">
           <label htmlFor="amount">Amount</label>
