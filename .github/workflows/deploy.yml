@@ -21,8 +21,6 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       - uses: actions/setup-node@v2
-        with:
-          node-version: '20'
-          alias-domains: |
-            fullstackexpensetracker.eustache.com
-            www.fullstackexpensetracker.eustache.com
+
+      - run: npm install -g @vercel/cli
+      - run: vercel --token ${{ secrets.VERCEL_TOKEN }} --scope eustache --prod
