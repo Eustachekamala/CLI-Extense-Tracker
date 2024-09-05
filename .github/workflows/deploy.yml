@@ -33,3 +33,4 @@ jobs:
           npm --version
           echo "NPX version:"
           npx --version
+          vercel --version
