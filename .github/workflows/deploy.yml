@@ -18,15 +18,10 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           working-directory: ./dist
+        env: VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '20'
           alias-domains: |
             fullstackexpensetracker.eustache.com
             www.fullstackexpensetracker.eustache.com
-      - name: Debugging Info
-        run: |
-          echo "Node version:"
-          node --version
-          echo "NPM version:"
-          npm --version
-          echo "NPX version:"
-          npx --version
-          vercel --version
