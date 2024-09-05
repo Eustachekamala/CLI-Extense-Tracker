@@ -18,7 +18,8 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           working-directory: ./dist
-        env: VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       - uses: actions/setup-node@v2
         with:
           node-version: '20'
