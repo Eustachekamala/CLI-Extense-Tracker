@@ -46,4 +46,17 @@ npm run dev
 ## Database
     - SQLite
 
+
+## Deployment
+    -Vercel
+        - Vercel CLI
+        - Vercel GitHub Integration
+        - Vercel Preview
+
+## Link app deployed
+https://full-stack-expense-tracker-zeta.vercel.app/
+
+## Created by
+[Eustache Kamala](https://github.com/eustachekamala)
+
 ## License
