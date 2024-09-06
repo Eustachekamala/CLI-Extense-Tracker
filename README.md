@@ -28,4 +28,22 @@ npm run dev
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Material UI](https://mui.com/)
 
+## Flask API
+
+- Flask
+- Flask-SQLAlchemy
+- Flask-JWT-Extended
+- Flask-JWT-Simple
+- Flask-Cors
+
+
+## Firebase
+
+- Firebase
+    - Authentication
+
+
+## Database
+    - SQLite
+
 ## License
