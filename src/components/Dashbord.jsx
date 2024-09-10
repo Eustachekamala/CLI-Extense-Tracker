@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Header from './Header';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 function Dashbord() {
   const [expenses, setExpenses] = useState([]);
@@ -27,15 +27,15 @@ function Dashbord() {
   return (
     <div className='flex flex-col gap-4 text-center'>
         <Header />
-      <form onSubmit={addExpense} className='flex flex-col border border-blue-100 gap-4 md:w-full m-4 text-center items-center mt-2 py-6 px-4 rounded-md'>
+      <form onSubmit={addExpense} className='flex flex-col border border-blue-100 gap-4 w-full md:w-1/2 m-4 text-center items-center mt-2 py-6 px-4 rounded-md'>
         <h1 className='text-2xl font-bold'>Add Expense</h1>
         <div className="flex flex-row gap-2 rounded-md w-full justify-between">
           <label htmlFor="amount">Amount</label>
-          <input className='border-2 border-slate-200 rounded-md' type="number" name="amount" id="amount" />
+          <input className='border-2 border-slate-200 rounded-md outline-none' type="number" name="amount" id="amount" />
         </div>
         <div className="flex flex-row gap-2 w-full justify-between">
           <label htmlFor="description">Description</label>
-          <input className='border-2 border-slate-200 rounded-md' type="text" name="description" id="description" />
+          <input className='border-2 border-slate-200 rounded-md outline-none' type="text" name="description" id="description" />
         </div>
         <button className='bg-blue-500 hover:bg-blue-700 w-max text-white font-bold py-2 px-4 rounded'><AddIcon /></button>
       </form>
@@ -52,7 +52,7 @@ function Dashbord() {
           {expenses.map((expense) => (
             <tr key={expense.id} className='border-b border-slate-200 mx-4 w-full'>
               <td>{expense.date}</td>
-              <td>${expense.amount.toFixed(2)}</td>
+              <td>ksh{expense.amount.toFixed(2)}</td>
               <td>{expense.description}</td>
               <td className='text-right'>
                 <button onClick={() => deleteExpense(expense.id)} className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'><DeleteIcon /></button>
