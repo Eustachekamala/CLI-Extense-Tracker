@@ -27,7 +27,7 @@ function Dashbord() {
   return (
     <div className='flex flex-col gap-4 text-center'>
         <Header />
-      <form onSubmit={addExpense} className='flex flex-col border border-blue-100 gap-4 w-full md:w-1/2 m-4 text-center items-center mt-2 py-6 px-4 rounded-md'>
+      <form onSubmit={addExpense} className='flex flex-col border border-blue-100 gap-4 w-11/12 md:w-1/2 m-4 text-center items-center mt-2 py-6 px-4 rounded-md'>
         <h1 className='text-2xl font-bold'>Add Expense</h1>
         <div className="flex flex-row gap-2 rounded-md w-full justify-between">
           <label htmlFor="amount">Amount</label>

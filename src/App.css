@@ -666,6 +666,14 @@ video {
   width: 4rem;
 }
 
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .table-auto {
   table-layout: auto;
 }
