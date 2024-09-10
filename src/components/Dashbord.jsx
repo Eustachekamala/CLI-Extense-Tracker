@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Header from './Header';``
+import Header from './Header';
+import { gsap } from 'gsap';
 
 function Dashbord() {
   const [expenses, setExpenses] = useState([]);
@@ -27,6 +28,8 @@ function Dashbord() {
     <div className='flex flex-col gap-4 text-center'>
         <Header />
       <form onSubmit={addExpense} className='flex flex-col gap-4 text-center items-center mt-2'>
+        <label htmlFor="date">Date</label>
+        <input className='border-2 border-slate-200 rounded-md' type="date" name="date" id="date" />
         <div className="flex flex-col gap-2">
           <label htmlFor="amount">Amount</label>
           <input className='border-2 border-slate-200 rounded-md' type="number" name="amount" id="amount" />
