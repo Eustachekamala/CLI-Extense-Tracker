@@ -27,14 +27,13 @@ function Dashbord() {
   return (
     <div className='flex flex-col gap-4 text-center'>
         <Header />
-      <form onSubmit={addExpense} className='flex flex-col gap-4 text-center items-center mt-2'>
-        <label htmlFor="date">Date</label>
-        <input className='border-2 border-slate-200 rounded-md' type="date" name="date" id="date" />
-        <div className="flex flex-col gap-2">
+      <form onSubmit={addExpense} className='flex flex-col border border-blue-100 gap-4 md:w-full m-4 text-center items-center mt-2 py-6 px-4 rounded-md'>
+        <h1 className='text-2xl font-bold'>Add Expense</h1>
+        <div className="flex flex-row gap-2 rounded-md w-full justify-between">
           <label htmlFor="amount">Amount</label>
           <input className='border-2 border-slate-200 rounded-md' type="number" name="amount" id="amount" />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-row gap-2 w-full justify-between">
           <label htmlFor="description">Description</label>
           <input className='border-2 border-slate-200 rounded-md' type="text" name="description" id="description" />
         </div>
