@@ -37,7 +37,6 @@ function Login() {
   return (
     <div className="h-1/2 w-full md:1/2 rounded-lg p-6 m-auto mt-24 flex flex-col items-center justify-center">
       <div className='w-full md:w-2/5 p-4 flex flex-col items-center justify-center'>
-        <h1 className='text-4xl md:text-5xl text-gray-400 font-bold text-center'>Welcome Back</h1>
         <h2 className="font-bold text-center text-2xl md:text-3xl m-6">Login to your account</h2>
         <form onSubmit={handleEmailLogin} className="flex flex-col gap-8 items-center justify-center w-full md:w-2/3">
           <input
